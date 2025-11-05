@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  database:
+    image: mysql:latest
+    container_name: proyecto_nuevo_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: db_EasyAdmin
+    ports:
+      - "52430:3306"
+    volumes:
+      - db_nuevo_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: proyecto_nuevo_phpmyadmin
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: database
+      PMA_USER: root
+      PMA_PASSWORD: password
+    depends_on:
+      - database
+
+volumes:
+  db_nuevo_data:

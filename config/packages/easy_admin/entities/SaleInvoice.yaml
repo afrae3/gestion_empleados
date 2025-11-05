@@ -1,0 +1,49 @@
+easy_admin:
+  entities:
+    SaleInvoice:
+      class: App\Entity\SaleInvoice
+      label: 'SaleInvoice'
+      translation_domain: 'messages'
+
+      list:
+        title: 'sale_invoice.list.title'
+        fields:
+          - { property: id, label: 'sale_invoice.label.id' }
+          - { property: invoiceNumber, label: 'sale_invoice.label.invoiceNumber' }
+          - { property: invoiceDate, label: 'sale_invoice.label.invoiceDate' }
+          - { property: totalAmount, label: 'sale_invoice.label.totalAmount' }
+          - { property: paid, label: 'sale_invoice.label.paid' }
+          - { property: discounts, label: 'sale_invoice.label.discounts' }
+
+        actions:
+          - { name: 'show', label: 'Mostrar', permission: 'VIEW' }
+          - { name: 'edit', label: 'Editar', permission: 'EDIT' }
+          - { name: 'delete', label: 'Eliminar', permission: 'DELETE' }
+
+      show:
+        title: 'sale_invoice.show.title'
+        fields:
+          - { property: id, label: 'sale_invoice.label.id' }
+          - { property: invoiceNumber, label: 'sale_invoice.label.invoiceNumber' }
+          - { property: invoiceDate, label: 'sale_invoice.label.invoiceDate' }
+          - { property: totalAmount, label: 'sale_invoice.label.totalAmount' }
+          - { property: paid, label: 'sale_invoice.label.paid' }
+          - { property: discounts, type: association, label: 'sale_invoice.label.discounts' }
+
+        actions:
+          - { name: 'edit', label: 'Editar', permission: 'EDIT' }
+          - { name: 'delete', label: 'Eliminar', permission: 'DELETE' }
+
+      form:
+        title: 'sale_invoice.form.title'
+        fields:
+          - { name: main, type: tab, label: 'sale_invoice.tab.main' }
+          - { name: general, type: group, css_class: col-sm-6, label: 'sale_invoice.group.general' }
+          - { property: invoiceNumber, label: 'sale_invoice.label.invoiceNumber' }
+          - { property: invoiceDate, label: 'sale_invoice.label.invoiceDate' }
+          - { property: totalAmount, label: 'sale_invoice.label.totalAmount' }
+          - { property: paid, label: 'sale_invoice.label.paid' }
+          - { property: discounts, label: 'sale_invoice.label.discounts' }
+
+      search:
+        fields: ['invoiceNumber']

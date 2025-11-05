@@ -1,0 +1,149 @@
+Customer: Cliente
+Customers: Clientes
+
+customer:
+  list:
+    title: Lista de Clientes
+  show:
+    title: Detalles del Cliente
+  form:
+    title: Formulario de Cliente
+  tab:
+    main: General
+  group:
+    general: Información general
+  label:
+    id: ID
+    firstName: Nombre
+    lastName: Apellido
+    email: Correo electrónico
+    phone: Teléfono
+    address: Dirección
+
+CustomerDiscount: Descuento de Cliente
+Customer Discount: Descuentos de Clientes
+
+customer_discount:
+  list:
+    title: Lista de Descuentos
+  show:
+    title: Detalles del Descuento
+  form:
+    title: Formulario de Descuento
+  tab:
+    main: General
+  group:
+    general: Información general
+  label:
+    id: ID
+    name: Nombre
+    percentage: Porcentaje
+    active: Activo
+
+Employee: Empleado
+Employees: Empleados
+
+employee:
+  list:
+    title: Empleados
+  show:
+    title: Detalles del empleado
+  form:
+    title: Formulario del empleado
+  tab:
+    main: General
+  group:
+    general: Información general
+  label:
+    id: ID
+    firstName: Nombre
+    lastName: Apellidos
+    email: Correo electrónico
+    contracts: Contratos
+
+EmployeeContract: Contrato de Empleado
+EmployeeContracts: Contratos de Empleados
+
+employee_contract:
+  list:
+    title: Lista de contratos de empleados
+  show:
+    title: Detalles del contrato de empleado
+  form:
+    title: Formulario del contrato de empleado
+  tab:
+    main: General
+  group:
+    general: Información general
+  label:
+    id: ID
+    contractType: Tipo de contrato
+    startDate: Fecha de inicio
+    endDate: Fecha de finalización
+    employee: Empleado
+
+EmployeeVacation: Vacaciones de Empleado
+EmployeeVacations: Vacaciones de Empleados
+
+employee_vacation:
+  list:
+    title: Lista de vacaciones
+  show:
+    title: Detalles de la vacación del empleado
+  form:
+    title: Formulario de vacación
+  tab:
+    main: General
+  group:
+    general: Información general
+  label:
+    id: ID
+    employee: Empleado
+    startDate: Fecha de inicio
+    endDate: Fecha de finalización
+    reason: Motivo
+
+Sales: Factura de Venta
+SaleInvoice: Facturas de Venta
+
+sale_invoice:
+  list:
+    title: Lista de Facturas
+  show:
+    title: Detalles de la Factura
+  form:
+    title: Formulario de Factura
+  tab:
+    main: General
+  group:
+    general: Información general
+  label:
+    id: ID
+    invoiceNumber: Número de factura
+    invoiceDate: Fecha de factura
+    totalAmount: Importe total
+    paid: Pagado
+    discounts: Descuentos
+
+Supplier: Proveedor
+Suppliers: Proveedores
+
+supplier:
+  list:
+    title: Lista de Proveedores
+  show:
+    title: Detalles del Proveedor
+  form:
+    title: Formulario de Proveedor
+  tab:
+    main: General
+  group:
+    general: Información general
+  label:
+    id: ID
+    name: Nombre
+    email: Correo electrónico
+    phone: Teléfono
+    address: Dirección
+
+

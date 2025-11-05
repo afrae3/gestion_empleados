@@ -1,0 +1,39 @@
+easy_admin:
+  entities:
+    EmployeeContract:
+      class: App\Entity\EmployeeContract
+      label: 'EmployeeContract'
+      translation_domain: 'messages' # 👈 habilita las traducciones
+
+      list:
+        title: 'employee_contract.list.title'
+        fields:
+          - { property: id, label: 'employee_contract.label.id' }
+          - { property: contractType, label: 'employee_contract.label.contractType' }
+          - { property: startDate, label: 'employee_contract.label.startDate' }
+          - { property: endDate, label: 'employee_contract.label.endDate' }
+          - { property: employee, label: 'employee_contract.label.employee' }
+        actions: ['show', 'edit', 'delete']
+
+      show:
+        title: 'employee_contract.show.title'
+        fields:
+          - { property: id, label: 'employee_contract.label.id' }
+          - { property: contractType, label: 'employee_contract.label.contractType' }
+          - { property: startDate, label: 'employee_contract.label.startDate' }
+          - { property: endDate, label: 'employee_contract.label.endDate' }
+          - { property: employee, type: association, label: 'employee_contract.label.employee' }
+        actions: ['edit', 'delete']
+
+      form:
+        title: 'employee_contract.form.title'
+        fields:
+          - { name: main, type: tab, label: 'employee_contract.tab.main' }
+          - { name: general, type: group, css_class: col-sm-6, label: 'employee_contract.group.general' }
+          - { property: contractType, label: 'employee_contract.label.contractType' }
+          - { property: startDate, label: 'employee_contract.label.startDate' }
+          - { property: endDate, label: 'employee_contract.label.endDate' }
+          - { property: employee, label: 'employee_contract.label.employee' }
+
+      search:
+        fields: ['contractType', 'employee']

@@ -1,0 +1,44 @@
+easy_admin:
+  entities:
+    Employee:
+      class: App\Entity\Employee
+      label: 'Employee'
+      translation_domain: 'messages' # 👈 Para activar las traducciones
+
+      list:
+        title: 'employee.list.title' # 👈 traducible
+        fields:
+          - { property: id, label: 'employee.label.id' }
+          - { property: firstName, label: 'employee.label.firstName' }
+          - { property: lastName, label: 'employee.label.lastName' }
+          - { property: email, label: 'employee.label.email' }
+          - { property: contractsCount, label: 'Nº de contratos' }
+        actions:
+          - { name: 'show', label: 'Mostrar', permission: 'VIEW' }
+          - { name: 'edit', label: 'Editar', permission: 'EDIT' }
+          - { name: 'delete', label: 'Eliminar', permission: 'DELETE' }
+
+      show:
+        title: 'employee.show.title'
+        fields:
+          - { property: id, label: 'employee.label.id' }
+          - { property: firstName, label: 'employee.label.firstName' }
+          - { property: lastName, label: 'employee.label.lastName' }
+          - { property: email, label: 'employee.label.email' }
+          - { property: contracts, type: association, label: 'employee.label.contracts' }
+        actions:
+          - { name: 'edit', label: 'Editar', permission: 'EDIT' }
+          - { name: 'delete', label: 'Eliminar', permission: 'DELETE' }
+
+      form:
+        title: 'employee.form.title'
+        fields:
+          - { name: main, type: tab, label: 'employee.tab.main' }
+          - { name: general, type: group, css_class: col-sm-6, label: 'employee.group.general' }
+          - { property: firstName, label: 'employee.label.firstName' }
+          - { property: lastName, label: 'employee.label.lastName' }
+          - { property: email, label: 'employee.label.email' }
+          - { property: contracts, label: 'employee.label.contracts' }
+
+      search:
+        fields: ['firstName', 'lastName', 'email']

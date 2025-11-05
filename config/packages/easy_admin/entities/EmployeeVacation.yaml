@@ -1,0 +1,39 @@
+easy_admin:
+  entities:
+    EmployeeVacation:
+      class: App\Entity\EmployeeVacation
+      label: 'EmployeeVacation'
+      translation_domain: 'messages' # 👈 habilita las traducciones
+
+      list:
+        title: 'employee_vacation.list.title'
+        fields:
+          - { property: id, label: 'employee_vacation.label.id' }
+          - { property: employee, label: 'employee_vacation.label.employee' }
+          - { property: startDate, label: 'employee_vacation.label.startDate' }
+          - { property: endDate, label: 'employee_vacation.label.endDate' }
+          - { property: reason, label: 'employee_vacation.label.reason' }
+        actions: ['show', 'edit', 'delete']
+
+      show:
+        title: 'employee_vacation.show.title'
+        fields:
+          - { property: id, label: 'employee_vacation.label.id' }
+          - { property: employee, type: association, label: 'employee_vacation.label.employee' }
+          - { property: startDate, label: 'employee_vacation.label.startDate' }
+          - { property: endDate, label: 'employee_vacation.label.endDate' }
+          - { property: reason, label: 'employee_vacation.label.reason' }
+        actions: ['edit', 'delete']
+
+      form:
+        title: 'employee_vacation.form.title'
+        fields:
+          - { name: main, type: tab, label: 'employee_vacation.tab.main' }
+          - { name: general, type: group, css_class: col-sm-6, label: 'employee_vacation.group.general' }
+          - { property: employee, label: 'employee_vacation.label.employee' }
+          - { property: startDate, label: 'employee_vacation.label.startDate' }
+          - { property: endDate, label: 'employee_vacation.label.endDate' }
+          - { property: reason, label: 'employee_vacation.label.reason' }
+
+      search:
+        fields: ['employee', 'reason']

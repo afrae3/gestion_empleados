@@ -1,0 +1,33 @@
+easy_admin:
+  entities:
+    CustomerDiscount:
+      class: App\Entity\CustomerDiscount
+      label: 'Customer Discount'
+      translation_domain: 'messages' # 👈 habilita traducciones
+
+      list:
+        title: 'customer_discount.list.title'
+        fields:
+          - { property: id, label: 'customer_discount.label.id' }
+          - { property: name, label: 'customer_discount.label.name' }
+          - { property: percentage, label: 'customer_discount.label.percentage' }
+          - { property: active, label: 'customer_discount.label.active' }
+        actions: ['show', 'edit', 'delete']
+
+      show:
+        title: 'customer_discount.show.title'
+        fields:
+          - { property: id, label: 'customer_discount.label.id' }
+          - { property: name, label: 'customer_discount.label.name' }
+          - { property: percentage, label: 'customer_discount.label.percentage' }
+          - { property: active, label: 'customer_discount.label.active' }
+        actions: ['edit', 'delete']
+
+      form:
+        title: 'customer_discount.form.title'
+        fields:
+          - { name: main, type: tab, label: 'customer_discount.tab.main' }
+          - { name: general, type: group, css_class: col-sm-6, label: 'customer_discount.group.general' }
+          - { property: name, label: 'customer_discount.label.name' }
+          - { property: percentage, label: 'customer_discount.label.percentage' }
+          - { property: active, label: 'customer_discount.label.active' }

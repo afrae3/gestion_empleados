@@ -1,0 +1,26 @@
+
+easy_admin:
+  design:
+    menu:
+      - label: Employees
+        icon: 'users'
+        children:
+          - { entity: Employee, icon: 'user-tie' }
+          - { entity: EmployeeContract, icon: 'file-contract' }
+          - { entity: EmployeeVacation, icon: 'umbrella-beach' }
+
+      - label: Sales
+        icon: 'shopping-cart'
+        children:
+          - { entity: SaleInvoice, icon: 'file-invoice-dollar' }
+
+      - label: Customers
+        icon: 'user-friends'
+        children:
+          - { entity: Customer, icon: 'address-book' }
+          - { entity: CustomerDiscount, icon: 'percent' }
+
+      - label: Suppliers
+        icon: 'truck'
+        children:
+          - { entity: Supplier, icon: 'building' }

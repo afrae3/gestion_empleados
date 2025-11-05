@@ -1,0 +1,42 @@
+easy_admin:
+  entities:
+    Customer:
+      class: App\Entity\Customer
+      label: 'Customer'
+      translation_domain: 'messages' # 👈 habilita traducciones
+
+      list:
+        title: 'customer.list.title'
+        fields:
+          - { property: id, label: 'customer.label.id' }
+          - { property: firstName, label: 'customer.label.firstName' }
+          - { property: lastName, label: 'customer.label.lastName' }
+          - { property: email, label: 'customer.label.email' }
+          - { property: phone, label: 'customer.label.phone' }
+          - { property: address, label: 'customer.label.address' }
+        actions: ['show', 'edit', 'delete']
+
+      show:
+        title: 'customer.show.title'
+        fields:
+          - { property: id, label: 'customer.label.id' }
+          - { property: firstName, label: 'customer.label.firstName' }
+          - { property: lastName, label: 'customer.label.lastName' }
+          - { property: email, label: 'customer.label.email' }
+          - { property: phone, label: 'customer.label.phone' }
+          - { property: address, label: 'customer.label.address' }
+        actions: ['edit', 'delete']
+
+      form:
+        title: 'customer.form.title'
+        fields:
+          - { name: main, type: tab, label: 'customer.tab.main' }
+          - { name: general, type: group, css_class: col-sm-6, label: 'customer.group.general' }
+          - { property: firstName, label: 'customer.label.firstName' }
+          - { property: lastName, label: 'customer.label.lastName' }
+          - { property: email, label: 'customer.label.email' }
+          - { property: phone, label: 'customer.label.phone' }
+          - { property: address, label: 'customer.label.address' }
+
+      search:
+        fields: ['firstName', 'lastName', 'email']

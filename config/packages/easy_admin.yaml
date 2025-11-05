@@ -1,0 +1,3 @@
+imports:
+  - { resource: 'easy_admin/entities/' }
+  - { resource: 'easy_admin/menu.yaml' }

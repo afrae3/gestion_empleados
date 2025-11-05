@@ -1,0 +1,36 @@
+easy_admin:
+  entities:
+    Supplier:
+      class: App\Entity\Supplier
+      label: 'Supplier'
+      translation_domain: 'messages' # 👈 habilita traducciones
+
+      list:
+        title: 'supplier.list.title'
+        fields:
+          - { property: id, label: 'supplier.label.id' }
+          - { property: name, label: 'supplier.label.name' }
+          - { property: email, label: 'supplier.label.email' }
+          - { property: phone, label: 'supplier.label.phone' }
+          - { property: address, label: 'supplier.label.address' }
+        actions: ['show', 'edit', 'delete']
+
+      show:
+        title: 'supplier.show.title'
+        fields:
+          - { property: id, label: 'supplier.label.id' }
+          - { property: name, label: 'supplier.label.name' }
+          - { property: email, label: 'supplier.label.email' }
+          - { property: phone, label: 'supplier.label.phone' }
+          - { property: address, label: 'supplier.label.address' }
+        actions: [ 'edit', 'delete' ]
+
+      form:
+        title: 'supplier.form.title'
+        fields:
+          - { name: main, type: tab, label: 'supplier.tab.main' }
+          - { name: general, type: group, css_class: col-sm-6, label: 'supplier.group.general' }
+          - { property: name, label: 'supplier.label.name' }
+          - { property: email, label: 'supplier.label.email' }
+          - { property: phone, label: 'supplier.label.phone' }
+          - { property: address, label: 'supplier.label.address' }

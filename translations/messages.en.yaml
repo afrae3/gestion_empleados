@@ -1,0 +1,148 @@
+Customer: Customer
+Customers: Customers
+
+customer:
+  list:
+    title: Customer List
+  show:
+    title: Customer Details
+  form:
+    title: Customer Form
+  tab:
+    main: General
+  group:
+    general: General information
+  label:
+    id: ID
+    firstName: First Name
+    lastName: Last Name
+    email: Email
+    phone: Phone
+    address: Address
+
+CustomerDiscount: Customer Discount
+Customer Discounts: Customer Discounts
+
+customer_discount:
+  list:
+    title: Discount List
+  show:
+    title: Discount Details
+  form:
+    title: Discount Form
+  tab:
+    main: General
+  group:
+    general: General information
+  label:
+    id: ID
+    name: Name
+    percentage: Percentage
+    active: Active
+
+Employee: Employee
+Employees: Employees
+
+employee:
+  list:
+    title: Employees
+  show:
+    title: Employee Details
+  form:
+    title: Employee Form
+  tab:
+    main: General
+  group:
+    general: General Information
+  label:
+    id: ID
+    firstName: First Name
+    lastName: Last Name
+    email: Email
+    contracts: Contracts
+
+EmployeeContract: Employee Contract
+EmployeeContracts: Employee Contracts
+
+employee_contract:
+  list:
+    title: List of employee contracts
+  show:
+    title: Employee contract details
+  form:
+    title: Employee contract form
+  tab:
+    main: General
+  group:
+    general: General information
+  label:
+    id: ID
+    contractType: Contract Type
+    startDate: Start Date
+    endDate: End Date
+    employee: Employee
+
+EmployeeVacation: Employee Vacation
+EmployeeVacations: Employee Vacations
+
+employee_vacation:
+  list:
+    title: List of vacations
+  show:
+    title: Employee vacation details
+  form:
+    title: Vacation form
+  tab:
+    main: General
+  group:
+    general: General information
+  label:
+    id: ID
+    employee: Employee
+    startDate: Start Date
+    endDate: End Date
+    reason: Reason
+
+SaleInvoice: Sale Invoice
+SaleInvoices: Sale Invoices
+
+sale_invoice:
+  list:
+    title: List of Invoices
+  show:
+    title: Sales Invoice Details
+  form:
+    title: Sales Invoice Form
+  tab:
+    main: General
+  group:
+    general: General information
+  label:
+    id: ID
+    invoiceNumber: Invoice Number
+    invoiceDate: Invoice Date
+    totalAmount: Total Amount
+    paid: Paid
+    discounts: Discounts
+
+Supplier: Supplier
+Suppliers: Suppliers
+
+supplier:
+  list:
+    title: Supplier List
+  show:
+    title: Supplier Details
+  form:
+    title: Supplier Form
+  tab:
+    main: General
+  group:
+    general: General information
+  label:
+    id: ID
+    name: Name
+    email: Email
+    phone: Phone
+    address: Address
+
