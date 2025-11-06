@@ -32,9 +32,14 @@ class Employee
     #[ORM\OneToMany(targetEntity: EmployeeContract::class, mappedBy: 'employee', cascade: ['all'], orphanRemoval: true)]
     private Collection $contracts;
 
+    #[Assert\Valid]
+    #[ORM\OneToMany(mappedBy: 'employee', targetEntity: EmployeeVacation::class, cascade: ['persist', 'remove'], orphanRemoval: true)]
+    private Collection $vacations;
+
     public function __construct()
     {
         $this->contracts = new ArrayCollection();
+        $this->vacations = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -104,6 +109,35 @@ class Employee
                 $contract->setEmployee(null);
             }
         }
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, EmployeeVacation>
+     */
+    public function getVacations(): Collection
+    {
+        return $this->vacations;
+    }
+
+    public function addVacation(EmployeeVacation $vacation): self
+    {
+        if (!$this->vacations->contains($vacation)) {
+            $this->vacations[] = $vacation;
+            $vacation->setEmployee($this);
+        }
+
+        return $this;
+    }
+
+    public function removeVacation(EmployeeVacation $vacation): self
+    {
+        if ($this->vacations->removeElement($vacation)) {
+            if ($vacation->getEmployee() === $this) {
+                $vacation->setEmployee(null);
+            }
+        }
+
         return $this;
     }
 
