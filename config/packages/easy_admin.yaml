@@ -1,3 +1,9 @@
+easy_admin:
+  design:
+    brand_color: '#3498db'
+
+  site_name: 'Panel de administración'
+
 imports:
   - { resource: 'easy_admin/entities/' }
   - { resource: 'easy_admin/menu.yaml' }
