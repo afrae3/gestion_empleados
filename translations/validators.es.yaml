@@ -1,0 +1,3 @@
+customer_discount:
+  percentage:
+    too_high: "El descuento no puede ser mayor al 50%."
