@@ -1,5 +1,6 @@
 
 ###> symfony/framework-bundle ###
+/.env
 /.env.local
 /.env.local.php
 /.env.*.local
@@ -8,3 +9,7 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+
+NOTAS:
+admin@email.com  | ["ROLE_ADMIN"] | 12345678  |
+jazmin@email.com | ["ROLE_USER"]  | 1234 |

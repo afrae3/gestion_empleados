@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use App\Validator\Constraints as AppAssert;
 
 #[ORM\Entity]
 class CustomerDiscount
@@ -17,6 +18,7 @@ class CustomerDiscount
     private ?string $name = null;
 
     #[ORM\Column(type: 'decimal', precision: 5, scale: 2)]
+    #[AppAssert\CustomerDiscountConstraint]
     private ?string $percentage = null;
 
     #[ORM\Column(type: 'boolean')]
